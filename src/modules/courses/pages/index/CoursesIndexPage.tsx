@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import './CoursesIndexPage.css';
+
+import { CourseCardComponent } from '../../components/course-card';
 
 import { Course } from '../../../../types/course';
 import { API_URL } from '../../../../constants/api-url';
@@ -19,14 +22,20 @@ export function CoursesIndexPage() {
           return response.json();
         }
 
-        throw new Error('Get courses request is not ok!');
+        throw new Error('Get all courses request was not ok!');
       });
   }
 
   return (
-    <div className="coursesPage">
-      <ul>
-        {courses.map(course => <li key={course.id}>{course.title}</li>)}
+    <div className="coursesIndexPage">
+      <div className="coursesIndexPageHeader">Courses page</div>
+
+      <ul className="coursesIndexPageBoard">
+        {courses.map(course =>
+          <li className="coursesIndexPageBoardItem" key={course.id}>
+            <CourseCardComponent course={course}/>
+          </li>
+        )}
       </ul>
     </div>
   );

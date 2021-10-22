@@ -1,0 +1,26 @@
+.coursesIndexPage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 20px;
+}
+
+.coursesIndexPageHeader {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.coursesIndexPageBoard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.coursesIndexPageBoardItem {
+  flex-shrink: 0;
+  width: 25%;
+  padding: 10px;
+}

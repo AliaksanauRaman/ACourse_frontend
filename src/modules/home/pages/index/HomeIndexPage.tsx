@@ -1,5 +1,9 @@
+import './HomeIndexPage.css';
+
 export function HomeIndexPage() {
   return (
-    <div>Home!</div>
+    <div className="homeIndexPage">
+      Home page
+    </div>
   );
 }

@@ -1,0 +1,27 @@
+.navigationBarComponent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  min-height: 0;
+  box-shadow: 1px 0 5px 1px rgba(0, 0, 0, .1);
+}
+
+.navigationBarComponentLinks {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.navigationBarComponentLinksItem {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 20px;
+}
+
+.navigationBarComponentLinksItem.active {
+  background-color: var(--primary-color);
+}

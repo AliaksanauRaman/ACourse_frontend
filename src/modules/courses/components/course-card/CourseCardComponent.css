@@ -1,0 +1,50 @@
+.courseCardComponent {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .15);
+}
+
+.courseCardComponentTitle {
+  flex-shrink: 0;
+  height: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.courseCardComponentDescription {
+  flex-grow: 1;
+}
+
+.courseCardComponentWantToImprove {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.courseCardComponentActions {
+  display: flex;
+  justify-content: right;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+/* TODO: Common button styles */
+.courseCardComponentActionsItem {
+  height: 20px;
+  font-size: 12px;
+  background-color: #dddddd;
+  border: none;
+  border-radius: 4px;
+}
+
+.courseCardComponentActionsItem:not(:disabled) {
+  cursor: pointer;
+}
+
+.courseCardComponentActionsItem:not(:last-child) {
+  margin-right: 5px;
+}

@@ -1,39 +1,42 @@
-import { Router, Link, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import './App.css';
 
+import { NavigationBarComponent } from './modules/core/components/navigation-bar';
 import { HomeIndexPage } from './modules/home/pages/index';
 import { CoursesIndexPage } from './modules/courses/pages/index';
+import { CoursePage } from './modules/courses/pages/course';
+import { NotFoundPage } from './modules/core/pages/404';
 
 const customHistory = createBrowserHistory();
 
 function App() {
   return (
     <Router history={customHistory}>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+      <div className="app">
+        <div className="appNavigationBar">
+          <NavigationBarComponent />
+        </div>
 
-            <li>
-              <Link to="/courses">Courses</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="appWorkspace">
+          <Switch>
+            <Route exact path="/">
+              <HomeIndexPage />
+            </Route>
 
-        <hr />
+            <Route exact path="/courses">
+              <CoursesIndexPage />
+            </Route>
 
-        <Switch>
-          <Route exact path="/">
-            <HomeIndexPage />
-          </Route>
+            <Route path="/courses/:courseId">
+              <CoursePage />
+            </Route>
 
-          <Route path="/courses">
-            <CoursesIndexPage />
-          </Route>
-        </Switch>
+            <Route>
+              <NotFoundPage />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

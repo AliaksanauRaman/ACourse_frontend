@@ -1,0 +1,20 @@
+.notFoundPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  flex-grow: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.notFoundPageErrorNumber {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.notFoundPageErrorMessage {
+  font-size: 26px;
+}
