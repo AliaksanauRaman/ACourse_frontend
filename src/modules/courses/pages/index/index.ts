@@ -1,0 +1,1 @@
+export { CoursesIndexPage } from './CoursesIndexPage';
