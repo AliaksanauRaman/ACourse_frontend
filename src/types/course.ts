@@ -6,3 +6,7 @@ export type Course = {
   readonly createdAt: Date;
   readonly modifiedAt: Date;
 };
+
+export type SomeNewType = {
+  readonly id: string;
+};
